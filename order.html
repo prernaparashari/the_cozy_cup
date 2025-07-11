@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Order - The Cozy Cup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Place Your Order</h1>
+    <p>We’ll have it ready for you ☕</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Order Form</h2>
+    <form id="orderForm">
+      <label for="item">Choose Coffee:</label><br>
+      <select id="item">
+        <option value="Espresso">Espresso - ₹100</option>
+        <option value="Latte">Latte - ₹150</option>
+        <option value="Cold Coffee">Cold Coffee - ₹130</option>
+      </select><br><br>
+
+      <label for="qty">Quantity:</label><br>
+      <input type="number" id="qty" min="1" value="1"><br><br>
+
+      <button type="button" onclick="placeOrder()">Order Now</button>
+    </form>
+
+    <p id="output" style="margin-top: 20px; font-weight: bold;"></p>
+  </section>
+
+  <script>
+    function placeOrder() {
+      const item = document.getElementById('item').value;
+      const qty = parseInt(document.getElementById('qty').value);
+      const prices = { "Espresso": 100, "Latte": 150, "Cold Coffee": 130 };
+      const total = prices[item] * qty;
+      document.getElementById('output').innerText = 
+        `✅ Your order for ${qty} ${item}(s) is placed. Total: ₹${total}`;
+    }
+  </script>
+
+  <footer>
+    &copy; 2025 The Cozy Cup
+  </footer>
+</body>
+</html>
+
