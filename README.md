@@ -1,2 +1,2 @@
 # the_cozy_cup
-A fully responsive multi-page website for The Cozy Cup coffee shop. Built using HTML5, CSS3, and vanilla JavaScript. Features include a digital menu, order form, and contact page — ideal for small businesses.
+The Cozy Cup is a static coffee shop website designed with clean HTML and CSS — includes pages like Home, Menu, About, and Contact.
